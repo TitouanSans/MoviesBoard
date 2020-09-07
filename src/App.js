@@ -5,7 +5,8 @@ import './App.css';
 import { MyMoviesLibrary, MoviesSearch, Details } from './pages';
 
 function App() {
-
+  console.log('Bonjour');
+  
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
