@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Movies = (props) => {
 
     let movies = props.movie;
 
     return (
-        <section>
+        <article>
             
             <img src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} alt={movies.title} />
 
@@ -17,7 +16,7 @@ const Movies = (props) => {
                 <button className='btn-edit'>AJOUTER</button>
                     
             </div>
-        </section>
+        </article>
     )
 }
 

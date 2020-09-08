@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
-import { MyMoviesLibrary, MoviesSearch, Details } from './pages';
+import './components/css/Filter.css';
+import { MyMoviesLibrary, MoviesSearch, MyDetails } from './pages';
 
 function App() {
-  console.log('Bonjour');
-  
+
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -21,8 +21,8 @@ function App() {
   }, []);
 
   return (
-    <Router className='test'>
-      <div className='App'>
+    <Router>
+      <main className='App'>
         <nav>
             <string className='logo'>MOVIES-BOARD</string>
             <Link to="/"><button>MA LISTE</button></Link>
@@ -38,11 +38,11 @@ function App() {
             <MoviesSearch />
           </Route>
 
-          <Route exact path='/Details/:id'>
-            <Details movies={movies}/>
+          <Route exact path='/MyDetails/:id'>
+            <MyDetails movies={movies}/>
           </Route>
         </Switch>
-      </div>
+      </main>
     </Router>
   );
 }

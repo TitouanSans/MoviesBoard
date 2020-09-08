@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../css/MyMovies.css'
 
 const MyMovies = (props) => {
 
     let myMovies = props.movie;
 
     return (
-        <section>
-            <Link to={`/Details/${myMovies.id}`}>
-                <img className='img-responsive' src={myMovies.poster} alt={myMovies.title} />
+        <article>
+            <Link to={`/MyDetails/${myMovies.id}`}>
+                <img src={myMovies.poster} alt={myMovies.title} />
             </Link>
             <div>
                 <p className='title'>{myMovies.title}</p>
@@ -16,11 +17,12 @@ const MyMovies = (props) => {
                 <p>{myMovies.description}</p>
 
                 <div>
+                    <Link to={`/MyDetails/${myMovies.id}`}><button className='btn-details'>DETAILS</button></Link>
                     <Link to='/edit'><button className='btn-edit'>MODIFIER</button></Link>
                     <Link to='/erase'><button className='btn-erase'>SUPPRIMER</button></Link>
                 </div>
             </div>
-        </section>
+        </article>
         
     )
 }

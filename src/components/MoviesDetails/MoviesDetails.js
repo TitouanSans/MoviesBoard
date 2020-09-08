@@ -1,25 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 const MoviesDetails = (props) => {
 
-    let moviesDetails = props.movie;
+    let id = useParams();
+    let moviesDetails = props.movies.filter(movie => movie.id == id.id);
 
     return (
-        <section>
-                <img className='img-responsive' src={moviesDetails.poster} alt={moviesDetails.title} />
+        <main>
+            <img className='img-responsive' src={moviesDetails[0].poster} alt={moviesDetails[0].title} />
             <div>
-                <p className='title'>{moviesDetails.title}</p>
-                <p>{moviesDetails.release_date}</p>
-                <p>{moviesDetails.description}</p>
+                <p className='title'>{moviesDetails[0].title}</p>
+                <p>{moviesDetails[0].release_date}</p>
+                <p>{moviesDetails[0].description}</p>
+                <p>{moviesDetails[0].actor}</p>
 
                 <div>
-                    <Link to='/Edit'><button className='btn-edit'>MODIFIER</button></Link>
-                    <Link to='/Erase'><button className='btn-erase'>SUPPRIMER</button></Link>
+                    <Link to='/edit'><button className='btn-edit'>MODIFIER</button></Link>
+                    <Link to='/erase'><button className='btn-erase'>SUPPRIMER</button></Link>
                 </div>
             </div>
-        </section>
-        
+            
+        </main>
     )
 }
 

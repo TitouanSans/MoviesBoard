@@ -1,3 +1,7 @@
+/**************************/
+/******NAVIGATION BAR******/
+/**************************/
+
 nav {
     padding: 1em;
     background-color: rgb(39, 39, 39);
@@ -15,30 +19,35 @@ nav button:hover {
     box-shadow: 0 0 1em aliceblue;
 }
 
+.logo {
+    font-size: 20px;
+    text-shadow: 0px 0px 15px black;
+}
+
+/****************/
+/******MAIN******/
+/****************/
+
+body {
+    background-color: rgb(52, 69, 83);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.App {
+    color: rgb(206, 206, 206);
+    
+    padding: 0 0 2em 0;
+    margin: 0;
+}
+
 h1 {
     text-align: center;
 }
 
-p{
-    font-size: 20px;
-    text-shadow: 0px 0px 20px black;
-
-    font-weight: bold;
-}
-
-img {
-    border: .3em solid rgb(29, 28, 28);
-}
-
-
-section {
-    text-align: center;
-    background-color: rgb(95, 123, 148);
-    
-    margin: 2em 2em 0 2em;
-    padding: 1em;
-    border-radius: 10px;
-}
+/******************/
+/******BUTTON******/
+/******************/
 
 button {
     border: none;
@@ -47,26 +56,12 @@ button {
     font-weight: bold;
 }
 
-.App {
-    background-color: rgb(52, 69, 83);
-    color: rgb(206, 206, 206);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-    padding: 0 0 2em 0;
-    margin: 0;
-}
-.logo {
-    font-size: 20px;
-    text-shadow: 0px 0px 15px black;
-}
-
-
 .btn-edit {
     background-color: rgb(78, 177, 131);
     color: aliceblue;
 
     padding: .5em 1em .5em 1em;
-    margin-right: .5em;
+    margin: 0 1em 0 1em;
     width: 8em;
     border-radius: 50px;
 }
@@ -82,7 +77,6 @@ button {
     color: aliceblue;
 
     padding: .5em 1em .5em 1em;
-    margin-left: .5em;
     width: 8em;
     border-radius: 50px;
 }
@@ -93,7 +87,37 @@ button {
     color: black;
 }
 
-.title {
-    font-size: 30px;
-    font-weight: bold;
+.btn-details {
+    background-color: rgb(230, 166, 49);
+    color: aliceblue;
+
+    padding: .5em 1em .5em 1em;
+    width: 8em;
+    border-radius: 50px;
+}
+.btn-details:hover {
+    transition-duration: .4s;
+
+    background-color: aliceblue;
+    color: black;
+}
+
+/**********************/
+/******RESPONSIVE******/
+/**********************/
+
+/*MIN*/
+
+@media all and (max-width:480px)
+{
+    html {
+        width: 480px;
+    }
+}
+
+@media all and (max-width:120px)
+{
+    html {
+        width: 400px;
+    }
 }

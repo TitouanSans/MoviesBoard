@@ -1,5 +1,6 @@
 import React from 'react';
 import Movies from '../Movies/Movies.js';
+import '../css/Movies.css';
 
 const MoviesLibrary = (props) => {
 
@@ -7,11 +8,11 @@ const MoviesLibrary = (props) => {
     console.log(moviesLibrary);
     
     return (
-        <section>
+        <div>
             {moviesLibrary.map((movie, index) => (
                 <Movies movie={movie} key={index} />
             ))}
-        </section>
+        </div>
     
     )
 }

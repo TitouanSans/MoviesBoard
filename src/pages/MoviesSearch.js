@@ -34,22 +34,26 @@ const MoviesSearch = () => {
     
     return (
         <section>
-            <div>
-                <h1>Recherche de Films</h1>
+            <h1>RECHERCHE DE FILMS</h1>
+            <article className='filter'>
                 <form onSubmit={(e) => { onSearch(e) }}>
 
-                    <label>Titre : </label>
-                    <input type='text' onChange={(e) => ( onTitleChange(e) )}></input>
+                    <div>
+                        <label>Titre : </label>
+                        <input type='text' placeholder="exemple: Batman" onChange={(e) => ( onTitleChange(e) )}></input>
+                    </div>
 
-                    <label>Date sortie : </label>
-                    <input type='date' onChange={(e) => ( onDateChange(e) )}></input>
-                
+                    <div>
+                        <label>Année : </label>
+                        <input type='number' onChange={(e) => ( onDateChange(e) )}></input>
+                    </div>
+
                     <input type='submit' value='Rechercher'></input>
                 
                 </form>
+            </article>
                 {moviesLibrary !== undefined && < MoviesLibrary moviesLibrary={moviesLibrary} />}
                 
-            </div>
         </section>
 
         

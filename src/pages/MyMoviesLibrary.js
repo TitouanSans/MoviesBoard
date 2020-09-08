@@ -6,12 +6,12 @@ const MyMoviesLibrary = (props) => {
     let myLibrary = props.movies;
 
     return (
-        <main>
+        <section>
             <h1>MA LISTE DE FILMS</h1>
             {myLibrary.map((movie, index) => (
                 <MyMovies movie={movie} key={index}/>
             ))}
-        </main>
+        </section>
         
     )
 }
