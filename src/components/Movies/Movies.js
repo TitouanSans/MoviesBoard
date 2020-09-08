@@ -1,38 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Movies.css'
+import axios from 'axios';
+
+//EN CONSTRUCTION : POST de 'movies' contenant les infos de TOUS les films sur la bibli local
+// function addMovie(movies){
+//     axios.post('http://localhost:3001/movies', movies);
+//     console.log(movies);
+// }
 
 const Movies = (props) => {
 
     let movies = props.movie;
 
-    // const [title, setTitle] = useState();
-    // const [date, setDate] = useState();
-    // const [clickBtn, setClickBtn] = useState(false);
-
-    // const onCreate = (e, movie) => {
-    //     e.preventDefault()
-    //     Axios.post('http://localhost:3000/movies', movie)
-    //     .then(result => {
-    //         window.location.replace('/')
-    //     })
-    //     .catch(error => {
-    //         console.log(error)
-    //     })
-    // }
-
-    // const onClickBtn = () => {
-    //     setClickBtn(true);
-    // }
-
-    // const onTitleChange = (e) => {
-    //     setTitle(e.target.value);
-    // }
-
-    // const onDateChange = (e) => {
-    //     setDate(e.target.value);
-    // }
-
+    //Affichage des films 
     return (
         <article>
             <Link to={`/MoviesDetails/${movies.id}`}>
@@ -42,7 +23,8 @@ const Movies = (props) => {
                 <p className='title'>{movies.title}</p>
                 <p>{movies.release_date}</p>
 
-                <button className='btn-edit' onClick='console.log(movies.title)'>AJOUTER</button>
+                {/* EN CONSTRUCTION : onClick appelant la fonction d'ajout sur la bibli local */}
+                <button className='btn-edit' /*onClick={addMovie(movies), console.log('CLICK')}*/>AJOUTER</button>
                     
             </div>
         </article>

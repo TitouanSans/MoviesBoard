@@ -1,6 +1,7 @@
 import React from 'react';
 import MyMovies from '../components/MyMovies/MyMovies.js';
 
+// Page par défaut, affiche le composant MyMovies
 const MyMoviesLibrary = (props) => {
 
     let myLibrary = props.movies;

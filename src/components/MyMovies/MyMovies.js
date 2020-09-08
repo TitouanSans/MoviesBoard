@@ -6,6 +6,7 @@ const MyMovies = (props) => {
 
     let myMovies = props.movie;
 
+    // Affichage des films du serveur local
     return (
         <article>
             <Link to={`/MyDetails/${myMovies.id}`}>
@@ -18,6 +19,8 @@ const MyMovies = (props) => {
 
                 <div>
                     <Link to={`/MyDetails/${myMovies.id}`}><button className='btn-details'>DETAILS</button></Link>
+                    
+                    {/* EN CONSTRUCTION  */}
                     <Link to='/edit'><button className='btn-edit'>MODIFIER</button></Link>
                     <Link to='/erase'><button className='btn-erase'>SUPPRIMER</button></Link>
                 </div>

@@ -8,7 +8,7 @@ const Details = (props) => {
     let thatMovie = props.movies.filter(movie => movie.id == id.id);
 
     console.log(thatMovie);
-    
+
     return (
         <section>
             <h1>DETAILS DU FILM</h1>
@@ -19,6 +19,7 @@ const Details = (props) => {
                     <p className='title'>{thatMovie[0].title}</p>
                     <p>{thatMovie[0].release_date}</p>
                     <p>{thatMovie[0].description}</p>
+                    {/* EN CONSTRUCTION */}
                     <p>{thatMovie[0].actor}</p>
 
                     <div>
