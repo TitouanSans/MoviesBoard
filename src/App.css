@@ -102,6 +102,21 @@ button {
     color: black;
 }
 
+.btn-add {
+    background-color: rgb(49, 230, 118);
+    color: aliceblue;
+
+    padding: .5em 1em .5em 1em;
+    width: 8em;
+    border-radius: 50px;
+}
+.btn-add:hover {
+    transition-duration: .4s;
+
+    background-color: aliceblue;
+    color: black;
+}
+
 /**********************/
 /******RESPONSIVE******/
 /**********************/

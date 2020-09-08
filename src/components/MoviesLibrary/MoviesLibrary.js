@@ -5,7 +5,6 @@ import '../css/Movies.css';
 const MoviesLibrary = (props) => {
 
     let moviesLibrary = props.moviesLibrary;
-    console.log(moviesLibrary);
     
     return (
         <div>

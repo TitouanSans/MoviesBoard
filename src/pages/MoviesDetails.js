@@ -1,29 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 
-const Details = (props) => {
+const MoviesDetails = (props) => {
 
     let id = useParams();
     let thatMovie = props.movies.filter(movie => movie.id == id.id);
 
-    console.log(thatMovie);
-    
+    console.log('thatMovie : ', thatMovie);
+    console.log('thatMovie[0]', thatMovie[0]);
+
     return (
         <section>
             <h1>DETAILS DU FILM</h1>
 
             <article>
-                <img src={thatMovie[0].poster} alt={thatMovie[0].title} />
+                <img src={`https://image.tmdb.org/t/p/w342${thatMovie.poster_path}`} alt={thatMovie.title} />
                 <div>
                     <p className='title'>{thatMovie[0].title}</p>
                     <p>{thatMovie[0].release_date}</p>
                     <p>{thatMovie[0].description}</p>
-                    <p>{thatMovie[0].actor}</p>
 
                     <div>
-                        <Link to='/edit'><button className='btn-edit'>MODIFIER</button></Link>
-                        <Link to='/erase'><button className='btn-erase'>SUPPRIMER</button></Link>
+                        <button className='btn-add'>AJOUTER</button>
                     </div>
                 </div>
                 
@@ -32,5 +30,4 @@ const Details = (props) => {
     )
 }
 
-
-export default Details;
+export default MoviesDetails;

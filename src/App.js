@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 import './components/css/Filter.css';
-import { MyMoviesLibrary, MoviesSearch, MyDetails } from './pages';
+import { MyMoviesLibrary, MoviesSearch, MyDetails, MoviesDetails } from './pages';
 
 function App() {
 
@@ -40,6 +40,10 @@ function App() {
 
           <Route exact path='/MyDetails/:id'>
             <MyDetails movies={movies}/>
+          </Route>
+
+          <Route exact path='/MoviesDetails/:id'>
+            <MoviesDetails movies={movies}/>
           </Route>
         </Switch>
       </main>
