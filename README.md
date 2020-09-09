@@ -2,6 +2,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Requires node's moduls :
+
+### `npm install`
+
 First, runs the local server app in 'moviesboard-server':
 
 ### `cd moviesboard-server`
