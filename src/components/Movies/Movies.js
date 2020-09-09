@@ -16,9 +16,10 @@ const Movies = (props) => {
     //Affichage des films 
     return (
         <article>
-            <Link to={`/MoviesDetails/${movies.id}`}>
+            {/* EN CONSTRUCTION : Affichage des détails du film dans la page dédiée. */}
+            {/* <Link to={`/MoviesDetails/${movies.id}`}> */}
                 <img src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} alt={movies.title} />
-            </Link>
+            {/* </Link> */}
             <div>
                 <p className='title'>{movies.title}</p>
                 <p>{movies.release_date}</p>

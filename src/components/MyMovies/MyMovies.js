@@ -21,8 +21,8 @@ const MyMovies = (props) => {
                     <Link to={`/MyDetails/${myMovies.id}`}><button className='btn-details'>DETAILS</button></Link>
                     
                     {/* EN CONSTRUCTION  */}
-                    <Link to='/edit'><button className='btn-edit'>MODIFIER</button></Link>
-                    <Link to='/erase'><button className='btn-erase'>SUPPRIMER</button></Link>
+                    <Link to={`/MyEdit/${myMovies.id}`}><button className='btn-edit'>MODIFIER</button></Link>
+                    <Link to='/Erase'><button className='btn-erase'>SUPPRIMER</button></Link>
                 </div>
             </div>
         </article>

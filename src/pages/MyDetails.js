@@ -23,8 +23,8 @@ const Details = (props) => {
                     <p>{thatMovie[0].actor}</p>
 
                     <div>
-                        <Link to='/edit'><button className='btn-edit'>MODIFIER</button></Link>
-                        <Link to='/erase'><button className='btn-erase'>SUPPRIMER</button></Link>
+                        <Link to={`/MyEdit/${thatMovie[0].id}`}><button className='btn-edit'>MODIFIER</button></Link>
+                        <Link to='/Erase'><button className='btn-erase'>SUPPRIMER</button></Link>
                     </div>
                 </div>
                 

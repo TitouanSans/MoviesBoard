@@ -2,18 +2,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+First, runs the local server app in 'moviesboard-server':
 
 ### `cd moviesboard-server`
 ### `npm start`
 
-First, runs the local server app.<br />
-
-Second, in an other terminal, in the project directory :
+Second, in an other terminal, in the project directory, 
+Runs the app in the development mode:
 
 ### `yarn start`
 
-Second, runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 import './components/css/Filter.css';
-import { MyMoviesLibrary, MoviesSearch, MyDetails, MoviesDetails } from './pages';
+import { MyMoviesLibrary, MoviesSearch, MyDetails, MoviesDetails, MyEdit } from './pages';
 
 function App() {
 
@@ -54,6 +54,11 @@ function App() {
             <MyDetails movies={movies}/>
           </Route>
 
+          {/* Page affichant l'interface de modification des films locaux*/}
+          <Route exact path='/MyEdit/:id'>
+            <MyEdit movies={movies}/>
+          </Route>
+
           {/*EN CONSTRUCTION : Page affichant les détails des films de TMDB*/}
           <Route exact path='/MoviesDetails/:id'>
             <MoviesDetails movies={movies}/>
@@ -61,7 +66,9 @@ function App() {
 
         </Switch>
       </main>
+      
     </Router>
+    
   );
 }
 
